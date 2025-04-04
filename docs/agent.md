@@ -1,6 +1,6 @@
 ## Installation on kubernetes
-- Configurazione XAutomata
-	- Creazione object "az-kubernetes.sherlogic.com"
+- XAutomata UI configuration
+	- Create a new object eg. "az-kubernetes.xautomata.com"
 	- Creazione probe type "agent"
 	- Creazione probe  "kube-az-agent" (riportare configmap nel data_profile)
 - Installare redpanda-console via chart helm e sostituire i values per puntare a kafka dell'ambiente
