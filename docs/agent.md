@@ -7,3 +7,13 @@
 - **K8s Configuration**
   - Create the Kafka topic `log.probe.<uuid_probe>` to ingest logs from the probe "kube-az-agent" (using `redpanda-console`)
   - Install the agent using the file `xautomata-agent-k8s.yaml` from the project sources, replacing the placeholder `<probe_uuid>` with the UUID of the probe "kube-az-agent"
+
+## Installation on Local Machine
+- **Requirements**
+  - Docker installed on machine
+- **Prerequisites**
+  - Install **ofelia** container (https://hub.docker.com/r/mcuadros/ofelia)
+    ```bash
+    docker pull mcuadros/ofelia
+    ```
+    ...TBC...
