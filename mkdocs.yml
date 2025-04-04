@@ -64,6 +64,10 @@ nav:
   - Documentation for dispatching/downtimes/services configuration: dispatching.md
   - Documentation for automata deployment: automata_deploy.md
   - Documentation for automata creation: automata_new.md
+  - Gerarchia esempio:
+      - sotto gerarchia esemio:
+        - documento gerarchia esempio: file_esempio.md
+
 
 copyright:
   All rights reserved
