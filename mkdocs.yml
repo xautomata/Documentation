@@ -1,0 +1,69 @@
+site_name: XAUTOMATA Documentation
+site_description: Documentation for the use of XAUTOMATA Services
+site_url: https://www.xautomata.com/
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.tooltips
+    - navigation.sections
+    - navigation.top
+    - navigation.expand
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - toc.follow
+    - header.autohide
+
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: blue
+      accent: indigo
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: indigo
+      accent: blue
+
+repo_name: XAUTOMATA Documentation
+repo_url: https://github.com/xautomata/Documentation.git
+
+plugins:
+  - mkdocstrings
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+nav:
+  - index.md
+  - Generic documentation of the XA system: info.md
+  - User manual for using XA (frontend): frontend.md
+  - XA deployment manual (helm) - including backup - delivery: helm.md
+  - Agent installation manual: agent.md
+  - Manuals for installation and configuration of probes: probes.md
+  - Documentation for dispatching/downtimes/services configuration: dispatching.md
+  - Documentation for automata deployment: automata_deploy.md
+  - Documentation for automata creation: automata_new.md
+
+copyright:
+  All rights reserved
