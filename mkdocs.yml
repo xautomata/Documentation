@@ -11,7 +11,6 @@ theme:
     - content.tooltips
     - navigation.sections
     - navigation.top
-    - navigation.expand
     - content.code.annotate
     - content.code.copy
     - content.code.select
@@ -56,17 +55,63 @@ markdown_extensions:
 
 nav:
   - index.md
-  - Generic documentation of the XA system: info.md
-  - User manual for using XA (frontend): frontend.md
-  - XA deployment manual (helm) - including backup - delivery: helm.md
-  - Agent installation manual: agent.md
-  - Manuals for installation and configuration of probes: probes.md
-  - Documentation for dispatching/downtimes/services configuration: dispatching.md
-  - Documentation for automata deployment: automata_deploy.md
-  - Documentation for automata creation: automata_new.md
-  - Hierarchical example:
-      - Sub-level:
-        - Example document: file_esempio.md
+  - Manuals: 
+    - Generic documentation of the XA system: info.md
+    - User manual for using XA (frontend):
+      - Overview: frontend/index.md
+      - Login: frontend/login.md
+      - First Login: frontend/first_login.md
+      - Login with SSO: frontend/login_sso.md
+      - Dashboards: frontend/super_admin/dashboards.md
+      - Customers:
+          - Overview: frontend/customers/index.md
+          - Customers: frontend/customers/customers.md
+          - Sites: frontend/customers/sites.md
+          - Contacts: frontend/customers/contacts.md
+      - Objects:
+          - Overview: frontend/objects/index.md
+          - Groups: frontend/objects/groups.md
+          - Objects: frontend/objects/objects.md
+          - Metric Types: frontend/objects/metric_types.md
+          - Metrics: frontend/objects/metrics.md
+          - Services: frontend/objects/services.md
+      - Tracking:
+          - Overview: frontend/tracking/index.md
+          - Calendars: frontend/tracking/calendars.md
+          - Downtimes: frontend/tracking/downtimes.md
+          - Dispatchers: frontend/tracking/dispatchers.md
+      - Administration:
+          - Overview: frontend/administration/index.md
+          - Users: frontend/administration/users.md
+          - Virtual Domains: frontend/administration/virtual_domains.md
+          - Probe Types: frontend/administration/probe_types.md
+          - Probes: frontend/administration/probes.md
+          - Opening Reasons: frontend/administration/opening_reasons.md
+          - Reason For Closure: frontend/administration/reasons_for_closures.md
+          - Messages: frontend/administration/messages.md
+          - Notification Providers: frontend/administration/notification_providers.md
+          - Notification Provider Types: frontend/administration/notification_provider_types.md
+      - Cloud Cost Registration:
+          - Overview: frontend/cloud_costs/index.md
+          - Azure CSP: frontend/cloud_costs/azure_csp.md
+          - Azure: frontend/cloud_costs/azure.md
+          - AWS: frontend/cloud_costs/aws.md
+          - Google: frontend/cloud_costs/google.md
+      - Analytical Accounting:
+          - Cost Views: frontend/accounting/cost_views.md
+      - Super Admin:
+          - Overview: frontend/super_admin/index.md
+          - Widgets: frontend/super_admin/widgets.md
+          - Widget Groups: frontend/super_admin/widget_groups.md
+          - ACL Overrides: frontend/super_admin/acl_overrides.md
+
+    - XA deployment manual (helm) - including backup - delivery: helm.md
+    - Agent installation manual: agent.md
+    - Manuals for installation and configuration of probes: probes.md
+    - Documentation for dispatching/downtimes/services configuration: dispatching.md
+    - Documentation for automata deployment: automata_deploy.md
+    - Documentation for automata creation: automata_new.md
+
 
 
 copyright:
