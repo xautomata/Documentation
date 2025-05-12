@@ -59,9 +59,17 @@ nav:
     - Generic documentation of the XA system: info.md
     - User manual for using XA (frontend):
       - Overview: frontend/index.md
-      - Login: frontend/login.md
-      - First Login: frontend/first_login.md
-      - Login with SSO: frontend/login_sso.md
+      # - Login: frontend/login.md
+      # - First Login: frontend/first_login.md
+      # - Login with SSO: frontend/login_sso.md
+      - Autentication:
+          - Overview: frontend/authentication/index.md
+          - First Login: frontend/authentication/first_login.md
+          - Login: frontend/authentication/login.md
+          - Login with SSO: frontend/authentication/login_sso.md
+          - Logout: frontend/authentication/logout.md
+          - Reset Password: frontend/authentication/reset_password.md
+          - Terms and Conditions: frontend/authentication/terms_conditions.md 
       - Dashboards: frontend/super_admin/dashboards.md
       - Customers:
           - Overview: frontend/customers/index.md
