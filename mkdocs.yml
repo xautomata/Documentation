@@ -49,68 +49,121 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.mark
   - attr_list
 
 nav:
   - index.md
-  - Manuals: 
+  - Manuals:
     - Generic documentation of the XA system: info.md
     - User manual for using XA (frontend):
       - Overview: frontend/index.md
-      # - Login: frontend/login.md
-      # - First Login: frontend/first_login.md
-      # - Login with SSO: frontend/login_sso.md
-      - Autentication:
-          - Overview: frontend/authentication/index.md
-          - First Login: frontend/authentication/first_login.md
-          - Login: frontend/authentication/login.md
-          - Login with SSO: frontend/authentication/login_sso.md
-          - Logout: frontend/authentication/logout.md
-          - Reset Password: frontend/authentication/reset_password.md
-          - Terms and Conditions: frontend/authentication/terms_conditions.md 
-      - Dashboards: frontend/super_admin/dashboards.md
-      - Customers:
-          - Overview: frontend/customers/index.md
-          - Customers: frontend/customers/customers.md
-          - Sites: frontend/customers/sites.md
-          - Contacts: frontend/customers/contacts.md
-      - Objects:
-          - Overview: frontend/objects/index.md
-          - Groups: frontend/objects/groups.md
-          - Objects: frontend/objects/objects.md
-          - Metric Types: frontend/objects/metric_types.md
-          - Metrics: frontend/objects/metrics.md
-          - Services: frontend/objects/services.md
-      - Tracking:
-          - Overview: frontend/tracking/index.md
-          - Calendars: frontend/tracking/calendars.md
-          - Downtimes: frontend/tracking/downtimes.md
-          - Dispatchers: frontend/tracking/dispatchers.md
+
+      - Getting Started:
+          - Login: frontend/getting_started/login.md
+          - Navigation: frontend/getting_started/navigation.md
+
+      # -------------------------------------------------------
+      # Concepts — platform architecture and data model
+      # -------------------------------------------------------
+      - Concepts:
+          - System Overview: frontend/concepts/system_overview.md
+          - Platform Models: frontend/concepts/platform_models.md
+          - Monitoring Architecture: frontend/concepts/monitoring_architecture.md
+          - Monitoring Lifecycle: frontend/concepts/monitoring_lifecycle.md
+          - Metrics and Metric Types: frontend/concepts/metrics_model.md
+
+      # -------------------------------------------------------
+      # Dashboards — access, management and built-in dashboards
+      # -------------------------------------------------------
+      - Dashboards:
+          - Overview: frontend/dashboards/index.md
+          - Dashboard Management: frontend/dashboards/management.md
+          - IT Infrastructure: frontend/dashboards/it_infrastructure.md
+          - Network: frontend/dashboards/network.md
+          - Cloud Cost: frontend/dashboards/cloud_cost.md
+
+      # -------------------------------------------------------
+      # Widgets — reference guide for all available widgets
+      # -------------------------------------------------------
+      - Widgets:
+          - Overview: frontend/widgets/overview.md
+          - Infrastructure Monitoring:
+              - IT Infrastructure: frontend/widgets/it_infrastructure.md
+              - IT Analytics: frontend/widgets/it_analytics.md
+              - IT Anomalies: frontend/widgets/it_anomalies.md
+          - Network Governance:
+              - Network: frontend/widgets/network.md
+              - Network Analytics: frontend/widgets/network_analytics.md
+              - Net Flow: frontend/widgets/net_flow.md
+          - Service Management:
+              - Support Service KPI: frontend/widgets/support_service_kpi.md
+          - Cost Governance:
+              - Cloud Cost: frontend/widgets/cloud_cost.md
+              - Analytical Accounting: frontend/widgets/analytical_accounting.md
+          - Dedicated Widgets:
+              - MCD Dedicated: frontend/widgets/mcd_dedicated.md
+              - MCD Massive Reboot: frontend/widgets/mcd_reboot.md
+              - MCD Rebuild VM: frontend/widgets/mcd_rebuild_vm.md
+              - MCD Massive Downtime: frontend/widgets/mcd_downtime.md
+
+      # -------------------------------------------------------
+      # Data Manager — entity configuration
+      # -------------------------------------------------------
+      - Data Manager:
+          - Overview: frontend/data_manager/overview.md
+          - Working with Entities: frontend/data_manager/working_with_entities.md
+          - Tree Hierarchy View: frontend/data_manager/tree_hierarchy_view.md
+          - Customers:
+              - Customers: frontend/data_manager/customers/customers.md
+              - Sites: frontend/data_manager/customers/sites.md
+              - Contacts: frontend/data_manager/customers/contacts.md
+          - Objects Repository:
+              - Groups: frontend/data_manager/objects/groups.md
+              - Objects: frontend/data_manager/objects/objects.md
+              - Metric Types: frontend/data_manager/objects/metric_types.md
+              - Metrics: frontend/data_manager/objects/metrics.md
+              - Services: frontend/data_manager/objects/services.md
+          - Monitoring Operations:
+              - Calendars: frontend/data_manager/monitoring/calendars.md
+              - Downtimes: frontend/data_manager/monitoring/downtimes.md
+              - Dispatchers: frontend/data_manager/monitoring/dispatchers.md
+
+      # -------------------------------------------------------
+      # Cost Management — cloud billing and cost views
+      # -------------------------------------------------------
+      - Cost Management:
+          - Overview: frontend/cost_management/overview.md
+          - Cloud Cost Registration:
+              - Overview: frontend/cost_management/cloud_cost_registration.md
+              - Cost Views: frontend/cost_management/cost_views.md
+
+      # -------------------------------------------------------
+      # Administration — platform configuration
+      # -------------------------------------------------------
       - Administration:
-          - Overview: frontend/administration/index.md
+          - Overview: frontend/administration/overview.md
+          - Access Control: frontend/administration/access_control.md
           - Users: frontend/administration/users.md
           - Virtual Domains: frontend/administration/virtual_domains.md
           - Probe Types: frontend/administration/probe_types.md
           - Probes: frontend/administration/probes.md
-          - Opening Reasons: frontend/administration/opening_reasons.md
-          - Reason For Closure: frontend/administration/reasons_for_closures.md
           - Messages: frontend/administration/messages.md
           - Notification Providers: frontend/administration/notification_providers.md
           - Notification Provider Types: frontend/administration/notification_provider_types.md
-      - Cloud Cost Registration:
-          - Overview: frontend/cloud_costs/index.md
-          - Azure CSP: frontend/cloud_costs/azure_csp.md
-          - Azure: frontend/cloud_costs/azure.md
-          - AWS: frontend/cloud_costs/aws.md
-          - Google: frontend/cloud_costs/google.md
-      - Analytical Accounting:
-          - Cost Views: frontend/accounting/cost_views.md
+
+      # -------------------------------------------------------
+      # Super Admin — restricted advanced management
+      # -------------------------------------------------------
       - Super Admin:
-          - Overview: frontend/super_admin/index.md
           - Widgets: frontend/super_admin/widgets.md
           - Widget Groups: frontend/super_admin/widget_groups.md
+          - Dashboards: frontend/super_admin/dashboards.md
           - ACL Overrides: frontend/super_admin/acl_overrides.md
 
     - XA deployment manual (helm) - including backup - delivery: helm.md
@@ -120,7 +173,6 @@ nav:
     - Documentation for automata deployment: automata_deploy.md
     - Documentation for automata creation: automata_new.md
 
-
-
+    
 copyright:
   All rights reserved
